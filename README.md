@@ -7,8 +7,15 @@ RabbitMQ with management and compatible version of the delayed message exchange 
 - [3.7.17-management-alpine](https://github.com/AllJointTW/rabbitmq-delayed-message-exchange/blob/3.7.17-management-alpine/Dockerfile)
 
 ## Running
-### Image
-  docker run alljoint/rabbitmq-delayed-message-exchange:latest
+### Docker
+```sh
+docker run -it \
+  -p 5672:5672 \
+  -p 15672:15672 \
+  -e RABBITMQ_DEFAULT_USER=root \
+  -e RABBITMQ_DEFAULT_PASS=pass \
+  alljoint/rabbitmq-delayed-message-exchange:latest
+```
 
 ### Docker Compose Sample:
 ```yaml
@@ -23,7 +30,7 @@ services:
 
     ports:
       - 5672:5672
-      - 15672:15672
+      - 15672:1567
 ```
 
 ## Environment
