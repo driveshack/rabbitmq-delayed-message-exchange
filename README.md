@@ -14,7 +14,7 @@ docker run -it \
   -p 15672:15672 \
   -e RABBITMQ_DEFAULT_USER=root \
   -e RABBITMQ_DEFAULT_PASS=pass \
-  alljoint/rabbitmq-delayed-message-exchange:latest
+  driveshack/rabbitmq-delayed-message-exchange:latest
 ```
 
 ### Docker Compose Sample:
